@@ -2,7 +2,7 @@ import Ember from 'ember';
 import layout from '../templates/components/with-service';
 import getOwner from 'ember-getowner-polyfill';
 
-export default Ember.Component.extend({
+let WithServiceComponent = Ember.Component.extend({
   layout,
 
   service: Ember.computed('serviceName', function() {
@@ -11,3 +11,9 @@ export default Ember.Component.extend({
     return owner.lookup(`service:${serviceName}`);
   }),
 });
+
+WithServiceComponent.reopenClass({
+  positionalParams: ['serviceName'],
+});
+
+export default WithServiceComponent;
