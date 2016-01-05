@@ -1,5 +1,7 @@
 # Ember-with-service
 
+[![npm version](https://badge.fury.io/js/ember-with-service.svg)](http://badge.fury.io/js/ember-with-service)
+[![Ember Observer Score](http://emberobserver.com/badges/ember-with-service.svg)](http://emberobserver.com/addons/ember-with-service)
 This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
