@@ -6,23 +6,20 @@ This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+* `ember install ember-with-service`
 
-## Running
+## Use
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+Let's say we wanted to inject the `session` service into our template:
 
-## Running Tests
-
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+```hbs
+<nav>
+  {{#with-service 'session' as |session|}}
+    <ul>
+      {{#if session.isAuthenticated}}
+        <li>{{#link-to 'logout'}}Logout{{/link-to}}</li>
+      {{/if}}
+    </ul>
+  {{/with-service}}
+</nav>
+```
