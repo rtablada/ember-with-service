@@ -3,6 +3,7 @@ import layout from '../templates/components/with-service';
 import getOwner from 'ember-getowner-polyfill';
 
 let WithServiceComponent = Ember.Component.extend({
+  tagName: "",
   layout,
 
   service: Ember.computed('serviceName', function() {
